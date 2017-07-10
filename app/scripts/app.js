@@ -65,6 +65,11 @@ angular
         controller: 'GestionPreguntasFrecuentesCtrl',
         controllerAs: 'gestionPreguntasFrecuentes'
       })
+      .when('/preguntas', {
+        templateUrl: 'views/preguntas.html',
+        controller: 'PreguntasCtrl',
+        controllerAs: 'preguntas'
+      })
       .otherwise({
         redirectTo: '/'
       });

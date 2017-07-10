@@ -28,6 +28,12 @@ angular.module('kontosApp')
       "Nombre": "Gestionar Preguntas Frecuentes",
       "Url": "gestion_preguntas_frecuentes",
       "Opciones": null
+    },
+    { //aqui va el servicio de el app de configuracion
+      "Id": 3,
+      "Nombre": "Hacer Preguntas",
+      "Url": "preguntas",
+      "Opciones": null
     }];
 
     var recorrerArbol = function(item, padre) {

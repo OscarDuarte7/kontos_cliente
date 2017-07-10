@@ -1,0 +1,90 @@
+<div  ng-cloak>
+
+  <md-content class="md-padding" layout="row">
+    <div flex="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+        <span class="md-headline">Hacer Preguntas</span>
+          </md-card-title-text>
+        </md-card-title>
+
+        <md-card-content>
+          <form name="myForm">
+            <!-- <div layout="row" layout-align="start">
+            <md-input-container>
+            <label>Sistema</label>
+            <md-select ng-model="userState" ng-disabled="$index === 1">
+            <md-option><em>Ninguno</em></md-option>
+            <md-option value="1" >SiCapital</md-option>
+            <md-option value="2">Argo</md-option>
+            <md-option value="3">Titán</md-option>
+            <md-option value="4">Agora</md-option>
+            <md-option value="5">Titán</md-option>
+          </md-select>
+        </md-input-container>
+
+        <md-input-container>
+        <label>Pregunta:</label>
+        <textarea  ></textarea>
+      </md-input-container>
+
+    </div> -->
+
+    <div layout="row" layout-align="center center" flex>
+      <md-input-container flex="50">
+        <label>Sistema</label>
+        <md-select name="sistema" ng-model="sistema"  required>
+          <md-option value="1" >SiCapital</md-option>
+          <md-option value="2">Argo</md-option>
+          <md-option value="3">Titán</md-option>
+          <md-option value="4">Agora</md-option>
+          <md-option value="5">Titán</md-option>
+        </md-select>
+        <div class="errors" ng-messages="myForm.sistema.$error">
+          <div ng-message="required">Requerido</div>
+        </div>
+      </md-input-container>
+
+    </div>
+
+    <div layout="row" layout-align="center center" flex>
+      <md-input-container flex="50">
+        <label>Pregunta</label>
+        <textarea required></textarea>
+      </md-input-container>
+
+    </div>
+
+<center>
+<button type="submit" class="btn btn-info">
+  <i class="fa fa-floppy-o" aria-hidden="true"></i>
+    Guardar
+</button>
+<center>
+
+
+  </form>
+
+</md-card-content>
+
+</md-card>
+</div>
+
+<div flex="50" layout="column">
+  <md-card>
+    <md-card-header>
+      <md-card-avatar>
+        <i class="fa fa-question-circle fa-3x" aria-hidden="true"></i>
+      </md-card-avatar>
+
+        <span class="md-title">Preguntas Realizadas</span>
+
+    </md-card-header>
+
+  </md-card>
+</div>
+
+</md-content>
+
+</div>
