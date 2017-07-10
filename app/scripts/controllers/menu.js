@@ -18,25 +18,16 @@ angular.module('kontosApp')
     $scope.token_service = token_service;
     $scope.breadcrumb = [];
     $scope.menu_service = [{ //aqui va el servicio de el app de configuracion
+      "Id": 1,
+      "Nombre": "Preguntas Frecuentes",
+      "Url": "preguntas_frecuentes",
+      "Opciones": null
+    },
+    { //aqui va el servicio de el app de configuracion
       "Id": 2,
-      "Nombre": "nivel 1",
-      "Url": "url_nivel_1",
-      "Opciones": [{
-        "Id": 3,
-        "Nombre": "nivel 2",
-        "Url": "url_nivel_2",
-        "Opciones": [{
-          "Id": 7,
-          "Nombre": "nivel 3",
-          "Url": "url_nivel_3",
-          "Opciones": [{
-            "Id": 8,
-            "Nombre": "nivel 4 about",
-            "Url": "about",
-            "Opciones": null
-          }]
-        }]
-      }]
+      "Nombre": "Gestionar Preguntas Frecuentes",
+      "Url": "gestion_preguntas_frecuentes",
+      "Opciones": null
     }];
 
     var recorrerArbol = function(item, padre) {

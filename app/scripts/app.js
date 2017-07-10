@@ -55,6 +55,16 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/preguntas_frecuentes', {
+        templateUrl: 'views/preguntas_frecuentes.html',
+        controller: 'PreguntasFrecuentesCtrl',
+        controllerAs: 'preguntasFrecuentes'
+      })
+      .when('/gestion_preguntas_frecuentes', {
+        templateUrl: 'views/gestion_preguntas_frecuentes.html',
+        controller: 'GestionPreguntasFrecuentesCtrl',
+        controllerAs: 'gestionPreguntasFrecuentes'
+      })
       .otherwise({
         redirectTo: '/'
       });

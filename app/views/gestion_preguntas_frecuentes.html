@@ -1,0 +1,52 @@
+
+
+<div  layout="column" ng-cloak>
+
+  <center><h3>¿Que desea hacer?</h3></center>
+
+
+  <md-content layout-padding layout="column">
+    <form ng-submit="$event.preventDefault()">
+      <md-autocomplete
+          ng-disabled="gestionPreguntasFrecuentes.isDisabled"
+          md-no-cache="gestionPreguntasFrecuentes.noCache"
+          md-selected-item="gestionPreguntasFrecuentes.pregunta_seleccionada"
+          md-search-text-change="gestionPreguntasFrecuentes.searchTextChange(gestionPreguntasFrecuentes.searchText)"
+          md-search-text="gestionPreguntasFrecuentes.searchText"
+          md-selected-item-change="gestionPreguntasFrecuentes.selectedItemChange(item)"
+          md-items="item in gestionPreguntasFrecuentes.querySearch(gestionPreguntasFrecuentes.searchText)"
+          md-item-text="item.name"
+          md-min-length="0"
+          placeholder="Seleccione una pregunta"
+          md-menu-class="autocomplete-custom-template">
+        <md-item-template>
+          <span class="item-title">
+            <md-icon class="fa fa-question"></md-icon>
+            <span> {{item.name}} </span>
+          </span>
+        </md-item-template>
+      </md-autocomplete>
+    </form>
+
+<br>
+
+  <md-input-container>
+<label>Pregunta:</label>
+<textarea ng-model="gestionPreguntasFrecuentes.pregunta_seleccionada.name" ></textarea>
+  </md-input-container>
+
+<md-input-container>
+<label>Respuesta:</label>
+<textarea ng-model="gestionPreguntasFrecuentes.pregunta_seleccionada.respuesta" ></textarea>
+</md-input-container>
+
+<md-input-container>
+<label>Paso a paso:</label>
+<textarea ng-model="gestionPreguntasFrecuentes.pregunta_seleccionada.pasos" ></textarea>
+</md-input-container>
+
+
+
+  </md-content>
+
+</div>
